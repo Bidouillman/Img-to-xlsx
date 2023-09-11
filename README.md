@@ -11,7 +11,7 @@ Replace 'your-img-path' with the path to your image file and 'your-xlxs-name' wi
 Run the script:
 python img_to_xlsx.py
 Description
-This script takes an image and converts it into an Excel spreadsheet. Each pixel is represented as three cells, one for the red (R), one for the green (G), and one for the blue (B) values. The script also colors each cell with the corresponding RGB color.
+This script takes an image and converts it into an Excel spreadsheet. Each pixel is represented as three cells, one for the red (R), one for the green (G), and one for the blue (B) values. The script also colors each cell with the corresponding RGB color... I will change a few things to make it easier to use.
 
 Requirements
 Python 3.x
