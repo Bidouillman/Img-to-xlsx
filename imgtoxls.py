@@ -8,10 +8,10 @@ xlsname = 'your-xlxs-name'
 # Ouvrir l'image / open the image and convert it with rgb value
 image = Image.open(image).convert('RGB')
 
-# Dimensions de l'image 
+# Picture dimensions 
 largeur, hauteur = image.size
 
-# Nouveau classeur Excel 
+# New Excel 
 classeur = openpyxl.Workbook()
 feuille = classeur.active
 
@@ -22,7 +22,7 @@ for y in range(hauteur):
         # extraire les valeurs RGB de chaque pixel de la ligne
         r, g, b = image.getpixel((x, y))
         
-        #sépare les valeurs pour les mettres dans 3 cellules distinctes (une rouge puis verte puis bleue)
+        ##separate the values to put them in 3 separate cells (one red then green then blue)
         for z in range(3):
             cellule = feuille.cell(row=y*3+z+1, column=x+1)
 
@@ -36,7 +36,7 @@ for y in range(hauteur):
                 value = b
                 color = f"FF0000{b:02X}"
 
-            # Coloration des pixel et ajoute de leurs valeur RGB
+            # Adding color and the rgb value
             cellule.value = f"{value}"
             fill = PatternFill(start_color=color, end_color=color, fill_type='solid')
             cellule.fill = fill
